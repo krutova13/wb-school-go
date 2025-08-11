@@ -1,0 +1,7 @@
+apple	red	fruit	sweet
+строка без разделителя
+banana	yellow	fruit	sweet
+еще одна строка без разделителя
+carrot	orange	vegetable	savory
+tomato	red	vegetable	savory
+grape	purple	fruit	sweet 

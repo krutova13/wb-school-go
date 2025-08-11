@@ -1,5 +1,6 @@
 package l17
 
+// BinarySearch выполняет бинарный поиск элемента в отсортированном массиве
 func BinarySearch(arr []int, target int) int {
 	left, right := 0, len(arr)-1
 	for left <= right {

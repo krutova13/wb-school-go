@@ -2,6 +2,7 @@ package l12
 
 import "fmt"
 
+// ToSet преобразует слайс строк в множество (map)
 func ToSet(words []string) map[string]struct{} {
 	set := make(map[string]struct{})
 
@@ -11,6 +12,7 @@ func ToSet(words []string) map[string]struct{} {
 	return set
 }
 
+// PrintResult выводит множество строк в консоль
 func PrintResult(result map[string]struct{}) {
 	fmt.Print("Полученное множество: {")
 	first := true

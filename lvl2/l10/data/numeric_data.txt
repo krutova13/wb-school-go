@@ -1,0 +1,8 @@
+file1.txt	1024B
+file2.txt	2KB
+file3.txt	1.2MB
+file4.txt	500B
+file5.txt	5GB
+file6.txt	750KB
+file7.txt	2.5MB
+file8.txt	300B

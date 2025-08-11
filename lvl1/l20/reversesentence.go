@@ -1,5 +1,6 @@
 package l20
 
+// ReverseSentence переворачивает порядок слов в предложении
 func ReverseSentence(s string) string {
 	runes := []rune(s)
 

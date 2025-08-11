@@ -1,5 +1,6 @@
 package l16
 
+// QuickSort выполняет быструю сортировку массива целых чисел
 func QuickSort(arr []int) []int {
 	if len(arr) < 2 {
 		return arr

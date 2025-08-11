@@ -1,5 +1,6 @@
 package l2
 
+// Square возводит в квадрат каждый элемент массива параллельно
 func Square(numbers []int) []int {
 	ch := make(chan int, len(numbers))
 

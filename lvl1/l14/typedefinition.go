@@ -2,6 +2,7 @@ package l14
 
 import "fmt"
 
+// DefineType определяет и выводит тип переданного значения
 func DefineType(v interface{}) {
 	switch v := v.(type) {
 	case int:

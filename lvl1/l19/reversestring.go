@@ -1,5 +1,6 @@
 package l19
 
+// ReverseString переворачивает строку
 func ReverseString(s string) string {
 	runes := []rune(s)
 	l := len(runes)

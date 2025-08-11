@@ -2,6 +2,7 @@ package l23
 
 import "fmt"
 
+// RemoveElementByIndex удаляет элемент из слайса по указанному индексу
 func RemoveElementByIndex(slice []int, index int) ([]int, error) {
 	if index < 0 || index >= len(slice) {
 		return slice, fmt.Errorf("индекс %d вне диапазона слайса [0,%d]", index, len(slice))

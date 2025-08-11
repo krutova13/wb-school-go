@@ -1,0 +1,8 @@
+apple	5	Jan
+banana	3	Mar
+cherry	7	Feb
+kiwi	1	Dec
+peach	8	Apr
+melon	2	Jun
+grape	9	May
+apricot	4	Jul

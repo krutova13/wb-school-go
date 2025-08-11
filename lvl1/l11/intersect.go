@@ -1,5 +1,6 @@
 package l11
 
+// Intersect находит пересечение двух массивов целых чисел
 func Intersect(arr1, arr2 []int) []int {
 	set := make(map[int]struct{})
 	var result []int
