@@ -1,0 +1,66 @@
+http:
+  port: 8080
+  read_timeout: 15s
+  write_timeout: 15s
+  idle_timeout: 60s
+
+postgres:
+  host: localhost
+  port: 5432
+  username: postgres
+  password: postgres
+  database: notifications
+  ssl_mode: disable
+  max_open_conns: 25
+  max_idle_conns: 5
+  conn_max_lifetime: 5m
+
+rabbitmq:
+  url: amqp://guest:guest@localhost:5672/
+  queue_name: notifications
+  exchange: notifications_delayed_exchange
+  max_retries: 5
+  retry_delay: 5s
+
+redis:
+  url: localhost:6379
+  password: ""
+  db: 0
+  timeout: 5s
+  notification_ttl: 24h
+  pool_size: 10
+  min_idle_conns: 5
+  max_conn_age: 30m
+  pool_timeout: 30s
+  idle_timeout: 5m
+  idle_check_freq: 1m
+
+logging:
+  level: debug
+  format: console
+
+telegram:
+  bot_token: "YOUR_BOT_TOKEN_HERE"
+  chat_id:
+
+email:
+  smtp_host: smtp.gmail.com
+  smtp_port: "587"
+  username: "test@gmail.com"
+  password: "test_password"
+  from_email: "test@gmail.com"
+  from_name: "Notification Service"
+
+worker:
+  count: 3
+  message_chan_size: 100
+  process_timeout: 30s
+
+retry:
+  publisher_attempts: 3
+  publisher_delay: 1s
+  publisher_backoff: 2
+  consumer_attempts: 3
+  consumer_delay: 1s
+  consumer_backoff: 2
+  max_retries: 3
