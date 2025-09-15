@@ -1,7 +1,6 @@
 package app
 
 import (
-	"context"
 	"fmt"
 	"net/http"
 	"time"
@@ -10,12 +9,6 @@ import (
 
 	"github.com/go-chi/chi/v5"
 )
-
-// HTTPServer определяет интерфейс для операций HTTP сервера
-type HTTPServer interface {
-	Start() error
-	Shutdown(ctx context.Context) error
-}
 
 // NewHTTPServer создает новый HTTP сервер
 func NewHTTPServer(cfg *config.Config, deps *Dependencies) *http.Server {
