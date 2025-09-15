@@ -39,22 +39,22 @@ func Initialize(ctx context.Context, cancel context.CancelFunc) (*App, error) {
 	}
 
 	if err := builder.WithDatabase(); err != nil {
-		builder.Rm.Rollback()
+		builder.Rm.CloseAll()
 		return nil, err
 	}
 
 	if err := builder.WithCache(); err != nil {
-		builder.Rm.Rollback()
+		builder.Rm.CloseAll()
 		return nil, err
 	}
 
 	if err := builder.WithSenders(); err != nil {
-		builder.Rm.Rollback()
+		builder.Rm.CloseAll()
 		return nil, err
 	}
 
 	if err := builder.WithPublisher(); err != nil {
-		builder.Rm.Rollback()
+		builder.Rm.CloseAll()
 		return nil, err
 	}
 

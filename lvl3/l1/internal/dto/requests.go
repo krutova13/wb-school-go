@@ -7,11 +7,11 @@ import (
 
 // CreateNotificationRequest представляет запрос на создание нового уведомления
 type CreateNotificationRequest struct {
-	Payload          string         `json:"payload" db:"payload"`
-	NotificationDate time.Time      `json:"notification_date" db:"notification_date"`
-	SenderID         string         `json:"sender_id" db:"sender_id"`
-	RecipientID      string         `json:"recipient_id" db:"recipient_id"`
-	Channel          domain.Channel `json:"channel" db:"channel"`
+	Payload          string         `json:"payload"`
+	NotificationDate time.Time      `json:"notification_date"`
+	SenderID         string         `json:"sender_id"`
+	RecipientID      string         `json:"recipient_id"`
+	Channel          domain.Channel `json:"channel"`
 	EmailConfig      *EmailConfig   `json:"email_config,omitempty"`
 }
 

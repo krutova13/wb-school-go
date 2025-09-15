@@ -28,8 +28,7 @@ func (rm *ResourceManager) AddResource(closeFunc func() error) {
 	rm.resources = append(rm.resources, closeFunc)
 }
 
-// CloseAll закрывает все ресурсы
-func (rm *ResourceManager) CloseAll() error {
+func (rm *ResourceManager) closeAll() error {
 	var lastErr error
 	for i := len(rm.resources) - 1; i >= 0; i-- {
 		if err := rm.resources[i](); err != nil {
@@ -39,9 +38,9 @@ func (rm *ResourceManager) CloseAll() error {
 	return lastErr
 }
 
-// Rollback закрывает все ресурсы при ошибке
-func (rm *ResourceManager) Rollback() error {
-	return rm.CloseAll()
+// CloseAll закрывает все ресурсы при ошибке
+func (rm *ResourceManager) CloseAll() error {
+	return rm.closeAll()
 }
 
 // DependencyBuilder создает зависимости пошагово
